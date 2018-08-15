@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CleverPlan</title>
+		<link rel="stylesheet" href="neededFiles/cleverPlan.css">
+		<script src="neededFiles/cleverPlan.js" defer></script>
+		<script src="neededFiles/cleave.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="neededFiles/hand.png">
+	</head>
+	<body class="red" id="back">
+		<div id="content">
+			<div id="banner">
+				<h1>Movistar - Digitel</h1>
+				<h2>(BsF / MB)</h2>
+				<h3>Selecciona tu operadora e ingresa la cantidad de BsF disponibles en tu linea para saber a cuanto equivalen en datos.</h3>
+			</div>
+			<div id="operation">
+				<div id="radio">
+				<label>Movistar<input id="movis" type="radio" onclick="check();" checked></label>
+				<label>Digitel<input id="dig" type="radio" onclick="check();"></label>
+				</div>
+				<div id="resul">
+					<input type="text" id="valor" placeholder="0.00BsF" onfocus= "this.placeholder='BsF'; this.value=''">
+					<button class="clickMe" onclick="mostrar();"></button>
+					<div id="resultado"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
