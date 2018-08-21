@@ -3,7 +3,7 @@ var dig = document.getElementById('dig');
 var resul = document.getElementById('resultado');
 var back = document.getElementById('back');
 var turn = 1;
-var tasa = {digitel: 450, movistar:630}; //REPRESENTA LAS TASAS DE BSF/MB.
+var tasa = {digitel: 0.00450, movistar:0.00630}; //REPRESENTA LAS TASAS DE BSF/MB.
 var first = true;
 var input = document.getElementById('valor');
 
@@ -37,7 +37,7 @@ function check(){
 function mostrar(){
 	var textbox = document.getElementById('valor');
 	var valor = document.getElementById('valor').value;
-	valor = erase(valor);
+	valor = valor.replace(/,/g,''); //Eliminar las ','
 	if(turn == 1){
 		var resultado = valor / tasa.movistar;
 	}else{
@@ -60,6 +60,8 @@ var cleave = new Cleave('#valor', {
     numeral: true,
     numeralThousandsGroupStyle: 'thousand'
 });
+
+/*
 // ELIMINAR LAS ',' EN EL FORMATO
 function erase(format){
 	var numbers = [];
@@ -72,3 +74,4 @@ function erase(format){
 	format = numbers.join('');
 	return format;
 }
+*/
