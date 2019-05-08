@@ -3,7 +3,7 @@ var dig = document.getElementById('dig');
 var resul = document.getElementById('resultado');
 var back = document.getElementById('back');
 var turn = 1;
-var tasa = {digitel: 4.99989, movistar: 5}; //REPRESENTA LAS TASAS DE BSF/MB.
+var tasa = {digitel: 4.99, movistar: 5}; //REPRESENTA LAS TASAS DE BSF/MB.
 var first = true;
 var input = document.getElementById('valor');
 
